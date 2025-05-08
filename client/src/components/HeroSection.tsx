@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import heroImage from "../assets/1746514704561.jpg";
 
 export default function HeroSection() {
   return (
@@ -48,11 +49,10 @@ export default function HeroSection() {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-xl">
               <img 
-                src="/src/assets/1746514704561.jpg" 
+                src={heroImage} 
                 alt="Devansh Baranwal Portrait" 
                 className="w-full h-full object-cover"
               />
-              {/* Note: Replace with: src="/src/assets/1746514704561.jpg" when image is uploaded */}
             </div>
             <motion.div 
               animate={{ 

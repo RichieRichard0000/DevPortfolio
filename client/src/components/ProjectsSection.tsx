@@ -3,6 +3,7 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Github, ExternalLink, ArrowRight } from "lucide-react";
 import ELabModal from "./ELabModal";
+import eLabImage from "../assets/elab.jpg";
 
 export default function ProjectsSection() {
   const sectionRef = useRef(null);
@@ -43,7 +44,7 @@ export default function ProjectsSection() {
     {
       title: "E-LAB Completion Status",
       description: "View my comprehensive E-LAB completion progress, showcasing my practical programming skills and laboratory assignments completed throughout my academic journey.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      image: eLabImage,
       tags: ["Academic", "Laboratory", "Programming", "Assessment"],
       tagColors: ["bg-blue-100 text-blue-800", "bg-green-100 text-green-800", "bg-red-100 text-red-800", "bg-purple-100 text-purple-800"]
     }

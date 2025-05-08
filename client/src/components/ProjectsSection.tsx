@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Github, ExternalLink, ArrowRight } from "lucide-react";
+import ELabModal from "./ELabModal";
 
 export default function ProjectsSection() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const [isELabModalOpen, setIsELabModalOpen] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -70,7 +72,12 @@ export default function ProjectsSection() {
                 y: -8,
                 transition: { duration: 0.3 }
               }}
-              className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300"
+              className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300 cursor-pointer"
+              onClick={() => {
+                if(project.title === "E-LAB Completion Status") {
+                  setIsELabModalOpen(true);
+                }
+              }}
             >
               <div className="h-48 overflow-hidden">
                 <img 

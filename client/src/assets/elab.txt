@@ -1,0 +1,2 @@
+This is a placeholder for the elab.png image file. 
+Please upload your E-LAB completion status image named 'elab.png' to this assets folder.

@@ -48,7 +48,7 @@ export default function HeroSection() {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-8 border-white shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                src="/src/assets/1746514704561.jpg" 
                 alt="Devansh Baranwal Portrait" 
                 className="w-full h-full object-cover"
               />

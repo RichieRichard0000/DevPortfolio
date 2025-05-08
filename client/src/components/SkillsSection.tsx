@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Code, Layers, Wrench, Award, Medal, ArrowRight } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent } from "@/components/ui/card";
+import ELabModal from "./ELabModal";
 
 export default function SkillsSection() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const [isELabModalOpen, setIsELabModalOpen] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -176,16 +178,19 @@ export default function SkillsSection() {
             
             <motion.div 
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="bg-white rounded-xl shadow-md p-6 border border-gray-100 md:col-span-2"
+              className="bg-white rounded-xl shadow-md p-6 border border-gray-100 md:col-span-2 cursor-pointer"
+              onClick={() => setIsELabModalOpen(true)}
             >
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <div className="sm:w-2/3">
                   <h4 className="text-lg font-heading font-medium text-gray-900 mb-2">E-LAB Completion Status</h4>
                   <p className="text-gray-600 mb-4">View my comprehensive programming lab work progress, demonstrating practical skills developed through hands-on exercises and assignments.</p>
-                  <a href="#projects" className="text-primary-600 hover:text-primary-700 font-medium text-sm inline-flex items-center">
+                  <button 
+                    className="text-primary-600 hover:text-primary-700 font-medium text-sm inline-flex items-center bg-transparent border-none p-0 cursor-pointer"
+                  >
                     View Detailed Status
                     <ArrowRight className="ml-1 h-4 w-4" />
-                  </a>
+                  </button>
                 </div>
                 <div className="sm:w-1/3">
                   <img 
@@ -196,6 +201,12 @@ export default function SkillsSection() {
                 </div>
               </div>
             </motion.div>
+            
+            {/* E-LAB Modal */}
+            <ELabModal 
+              isOpen={isELabModalOpen} 
+              onClose={() => setIsELabModalOpen(false)} 
+            />
           </div>
         </motion.div>
       </motion.div>

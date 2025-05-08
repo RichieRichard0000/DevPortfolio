@@ -70,8 +70,7 @@ export default function SkillsSection() {
           {/* Programming Languages Card */}
           <motion.div
             variants={itemVariants}
-            whileHover="hover"
-            variants={cardHoverVariants}
+            whileHover={{ y: -8, transition: { duration: 0.3 } }}
             className="bg-white rounded-xl shadow-md p-6 border border-gray-100"
           >
             <div className="w-14 h-14 bg-primary-100 rounded-lg flex items-center justify-center mb-5">
@@ -87,7 +86,7 @@ export default function SkillsSection() {
                     <span className="text-sm font-medium text-gray-700">{skill.name}</span>
                     <span className="text-sm font-medium text-gray-700">{skill.percentage}%</span>
                   </div>
-                  <Progress value={skill.percentage} className="h-2" indicatorClassName="bg-primary-500" />
+                  <Progress value={skill.percentage} className="h-2 bg-primary-500" />
                 </div>
               ))}
             </div>
@@ -96,8 +95,7 @@ export default function SkillsSection() {
           {/* Frameworks & Libraries Card */}
           <motion.div
             variants={itemVariants}
-            whileHover="hover"
-            variants={cardHoverVariants}
+            whileHover={{ y: -8, transition: { duration: 0.3 } }}
             className="bg-white rounded-xl shadow-md p-6 border border-gray-100"
           >
             <div className="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-5">
@@ -113,7 +111,7 @@ export default function SkillsSection() {
                     <span className="text-sm font-medium text-gray-700">{skill.name}</span>
                     <span className="text-sm font-medium text-gray-700">{skill.percentage}%</span>
                   </div>
-                  <Progress value={skill.percentage} className="h-2" indicatorClassName="bg-green-500" />
+                  <Progress value={skill.percentage} className="h-2 bg-green-500" />
                 </div>
               ))}
             </div>
@@ -122,8 +120,7 @@ export default function SkillsSection() {
           {/* Tools & Technologies Card */}
           <motion.div
             variants={itemVariants}
-            whileHover="hover"
-            variants={cardHoverVariants}
+            whileHover={{ y: -8, transition: { duration: 0.3 } }}
             className="bg-white rounded-xl shadow-md p-6 border border-gray-100 lg:col-span-1 md:col-span-2 lg:col-auto"
           >
             <div className="w-14 h-14 bg-purple-100 rounded-lg flex items-center justify-center mb-5">
@@ -139,7 +136,7 @@ export default function SkillsSection() {
                     <span className="text-sm font-medium text-gray-700">{skill.name}</span>
                     <span className="text-sm font-medium text-gray-700">{skill.percentage}%</span>
                   </div>
-                  <Progress value={skill.percentage} className="h-2" indicatorClassName="bg-purple-500" />
+                  <Progress value={skill.percentage} className="h-2 bg-purple-500" />
                 </div>
               ))}
             </div>
@@ -152,8 +149,7 @@ export default function SkillsSection() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.div 
-              whileHover="hover"
-              variants={cardHoverVariants}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
               className="bg-white rounded-xl shadow-md p-6 border border-gray-100 flex items-center"
             >
               <div className="flex-shrink-0 w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
@@ -166,8 +162,7 @@ export default function SkillsSection() {
             </motion.div>
             
             <motion.div 
-              whileHover="hover"
-              variants={cardHoverVariants}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
               className="bg-white rounded-xl shadow-md p-6 border border-gray-100 flex items-center"
             >
               <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">

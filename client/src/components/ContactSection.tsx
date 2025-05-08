@@ -182,7 +182,7 @@ export default function ContactSection() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-sm font-medium text-gray-500">Email</h4>
-                    <a href="mailto:devansh.b@srmist.edu.in" className="text-base text-gray-900 hover:text-primary-600">devansh.b@srmist.edu.in</a>
+                    <a href="mailto:devansh.b@srmist.edu.in" className="text-base text-gray-900 hover:text-primary-600">db5436@srmist.edu.in</a>
                   </div>
                 </div>
                 

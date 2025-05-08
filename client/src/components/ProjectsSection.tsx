@@ -39,18 +39,11 @@ export default function ProjectsSection() {
       tagColors: ["bg-green-100 text-green-800", "bg-yellow-100 text-yellow-800", "bg-blue-100 text-blue-800", "bg-purple-100 text-purple-800"]
     },
     {
-      title: "CropCare",
-      description: "A comprehensive crop management platform with personalized recommendations for irrigation, fertilization, and pest control based on real-time data.",
-      image: "https://images.unsplash.com/photo-1587467512961-120760940315?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      tags: ["React", "Node.js", "MongoDB", "Data Analytics"],
+      title: "E-LAB Completion Status",
+      description: "View my comprehensive E-LAB completion progress, showcasing my practical programming skills and laboratory assignments completed throughout my academic journey.",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+      tags: ["Academic", "Laboratory", "Programming", "Assessment"],
       tagColors: ["bg-blue-100 text-blue-800", "bg-green-100 text-green-800", "bg-red-100 text-red-800", "bg-purple-100 text-purple-800"]
-    },
-    {
-      title: "CodeTrack",
-      description: "A competitive programming tracker that helps students analyze their performance, identify improvement areas, and track progress across platforms.",
-      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
-      tags: ["Vue.js", "Firebase", "REST APIs", "JavaScript"],
-      tagColors: ["bg-blue-100 text-blue-800", "bg-green-100 text-green-800", "bg-purple-100 text-purple-800", "bg-yellow-100 text-yellow-800"]
     }
   ];
 
@@ -73,8 +66,10 @@ export default function ProjectsSection() {
             <motion.div
               key={index}
               variants={itemVariants}
-              whileHover="hover"
-              variants={cardHoverVariants}
+              whileHover={{ 
+                y: -8,
+                transition: { duration: 0.3 }
+              }}
               className="bg-white rounded-xl overflow-hidden shadow-md border border-gray-100 transition-all duration-300"
             >
               <div className="h-48 overflow-hidden">

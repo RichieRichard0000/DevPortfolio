@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code, Layers, Wrench, Award, Medal } from "lucide-react";
+import { Code, Layers, Wrench, Award, Medal, ArrowRight } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -180,16 +180,25 @@ export default function SkillsSection() {
             </motion.div>
             
             <motion.div 
-              whileHover="hover"
-              variants={cardHoverVariants}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
               className="bg-white rounded-xl shadow-md p-6 border border-gray-100 md:col-span-2"
             >
-              <div className="w-full">
-                <img 
-                  src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=400" 
-                  alt="E-Lab Completion Status" 
-                  className="w-full h-48 object-cover rounded-lg shadow-sm"
-                />
+              <div className="flex flex-col sm:flex-row items-center gap-4">
+                <div className="sm:w-2/3">
+                  <h4 className="text-lg font-heading font-medium text-gray-900 mb-2">E-LAB Completion Status</h4>
+                  <p className="text-gray-600 mb-4">View my comprehensive programming lab work progress, demonstrating practical skills developed through hands-on exercises and assignments.</p>
+                  <a href="#projects" className="text-primary-600 hover:text-primary-700 font-medium text-sm inline-flex items-center">
+                    View Detailed Status
+                    <ArrowRight className="ml-1 h-4 w-4" />
+                  </a>
+                </div>
+                <div className="sm:w-1/3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800" 
+                    alt="E-Lab Completion Status" 
+                    className="w-full h-48 object-cover rounded-lg shadow-sm"
+                  />
+                </div>
               </div>
             </motion.div>
           </div>

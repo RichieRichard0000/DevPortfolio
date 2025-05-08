@@ -117,6 +117,12 @@ export default function ProjectsSection() {
             </motion.div>
           ))}
         </div>
+        
+        {/* E-LAB Modal */}
+        <ELabModal 
+          isOpen={isELabModalOpen} 
+          onClose={() => setIsELabModalOpen(false)} 
+        />
       </motion.div>
     </section>
   );

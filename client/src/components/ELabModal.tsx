@@ -1,6 +1,7 @@
-import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { X } from "lucide-react";
+// Import elab image when it's available
+// import eLabImage from "@assets/elab.png";
 
 type ELabModalProps = {
   isOpen: boolean;
@@ -26,11 +27,14 @@ export default function ELabModal({ isOpen, onClose }: ELabModalProps) {
           </DialogDescription>
         </DialogHeader>
         <div className="overflow-auto max-h-[70vh]">
-          <img 
-            src="/src/assets/elab.png" 
-            alt="E-LAB Completion Status" 
-            className="w-full h-auto object-contain"
-          />
+          <div className="bg-gray-50 p-8 rounded-lg text-center">
+            <p className="text-lg text-gray-700 mb-4">
+              Please upload your E-LAB completion status image (elab.png) to display here.
+            </p>
+            <p className="text-sm text-gray-500">
+              The image will automatically be displayed once uploaded to client/src/assets/elab.png
+            </p>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
